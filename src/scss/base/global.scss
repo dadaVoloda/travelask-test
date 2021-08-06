@@ -1,0 +1,234 @@
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $textColor;
+  background-color: $white;
+}
+
+// .container {
+//   max-width: 1270px;
+//   margin: 0 auto;
+//   padding: 0 15px;
+// }
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  padding: 0 10px;
+}
+
+.modal {
+  max-width: 600px;
+  min-height: 250px;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 1px 16.02px 1.98px rgba(52, 56, 63, 0.46);
+
+  &__header {
+  }
+
+  &__avatar {
+    border-radius: 3px;
+  }
+
+  &__dialog {
+  }
+
+  &__message {
+  }
+}
+.modal-header {
+  border-bottom: 1px solid #ebebeb;
+  &__decor {
+    height: 11px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    padding: 17px 7px 14px 30px;
+    @media (max-width: 480px) {
+      padding-left: 10px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    margin-right: auto;
+
+    picture {
+      margin-right: 14px;
+      @media (max-width: 480px) {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  &__user-img {
+  }
+
+  &__user-name {
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $black;
+  }
+
+  &__user-city {
+    font-size: 16px;
+    line-height: 20px;
+    color: $gray;
+  }
+
+  &__rating {
+    display: flex;
+    margin-top: 4px;
+    margin-right: 15px;
+    picture {
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 1px;
+      }
+    }
+  }
+
+  &__close {
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+}
+
+.dialog {
+  padding: 7px;
+  &__list {
+    max-height: 294px;
+    overflow-y: auto;
+    padding: 0 13px 0 23px;
+    @media (max-width: 480px) {
+      padding: 0 3px 0 3px;
+    }
+  }
+  &__item {
+    display: flex;
+    padding: 7px 6px 7px 15px;
+    border-radius: 3px;
+    @media (max-width: 480px) {
+      padding: 7px 5px 7px 5px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &--me {
+      background-color: #f7f5f7;
+    }
+
+    &--new {
+      background-color: #e9f2fa;
+    }
+
+    picture {
+      flex-shrink: 0;
+      margin-right: 15px;
+      @media (max-width: 480px) {
+        margin-right: 7px;
+      }
+    }
+    .modal__avatar {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    max-width: 375px;
+    padding-right: 6px;
+
+    a {
+      color: #3399ff;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+  }
+
+  &__date {
+    min-width: 50px;
+    margin-left: auto;
+    font-size: 12px;
+    line-height: 20px;
+    color: $gray;
+  }
+}
+.user-message {
+  display: flex;
+  padding: 12px 30px 10px;
+  background-color: #e9f2fa;
+  @media (max-width: 480px) {
+    padding: 12px 10px 10px;
+  }
+
+  picture {
+    margin-right: 14px;
+    @media (max-width: 480px) {
+      margin-right: 7px;
+    }
+  }
+
+  &__form {
+    flex: 1;
+  }
+
+  &__textarea {
+    display: block;
+    width: 100%;
+    min-height: 76px;
+    resize: none;
+    padding: 5px;
+    margin-bottom: 7px;
+    border-color: #b1b6bb;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  &__btn {
+    padding: 5px 27px;
+    font-size: 16px;
+    color: inherit;
+    border: 1px solid #b1b6bb;
+    border-radius: 3px;
+    background-image: linear-gradient(0deg, rgb(212, 212, 216) 0%, rgb(255, 255, 255) 100%);
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(0deg, rgb(199, 199, 201) 0%, rgb(241, 238, 238) 100%);
+    }
+  }
+}
+
+.dialog__list::-webkit-scrollbar,
+.user-message__textarea::-webkit-scrollbar {
+  width: 12px;
+  cursor: default !important;
+}
+
+.dialog__list::-webkit-scrollbar-thumb,
+.user-message__textarea::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+  border-radius: 100px;
+  border: 2px solid white;
+}
+
+.dialog__list::-webkit-scrollbar-thumb:hover,
+.user-message__textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #b4b4b4;
+}

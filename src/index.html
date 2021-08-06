@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Travelask</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="modal">
+      <div class="modal__header modal-header">
+        <div class="modal-header__decor" style="background-image: url('../img/decor-top.png');"></div>
+        <div class="modal-header__content">
+          <div class="modal-header__user">
+            <img class="modal-header__user-img modal__avatar" src="img/friend-avatar.jpg" alt="friend avatar">
+            <div class="modal-header__user-descr">
+              <p class="modal-header__user-name">Токсикова Ольга</p>
+              <p class="modal-header__user-city">Днепропетровск</p>
+            </div>
+          </div>
+          <div class="modal-header__rating">
+            <img src="img/gold-star.svg" alt="star">
+            <img src="img/gold-star.svg" alt="star">
+            <img src="img/star.svg" alt="star">
+            <img src="img/star.svg" alt="star">
+            <img src="img/star.svg" alt="star">
+          </div>
+          <button class="modal-header__close" type="button">
+            <img src="img/close.png" alt="close icon">
+          </button>
+        </div>
+      </div>
+      <div class="modal__dialog dialog">
+        <ul class="dialog__list">
+          <li class="dialog__item">
+            <img class="modal__avatar" src="img/friend-avatar.jpg" alt="friend avatar">
+            <p class="dialog__text">
+              Где взять на прокат вечернее красивое платье? А еще лучше дизайнерское! Предстоит
+              участие в <a href="#">мероприятии</a>, где все гости будут наверняка одеты в наряды "от кутюр", а у меня
+              со
+              средствами
+              туговато, да и жалко на один раз такие деньжищи отваливать.
+            </p>
+            <p class="dialog__date">вчера в 17.45</p>
+          </li>
+          <li class="dialog__item dialog__item--me">
+            <img class="modal__avatar" src="img/avatar.jpg" alt="avatar">
+            <p class="dialog__text">
+              Поисковик вам в помощь! Но цена примерно в половину стоимости платья.
+            </p>
+            <p class="dialog__date">вчера в 18.45</p>
+          </li>
+          <li class="dialog__item">
+            <img class="modal__avatar" src="img/friend-avatar.jpg" alt="friend avatar">
+            <p class="dialog__text">
+              Где взять на прокат вечернее красивое платье? А еще лучше дизайнерское! Предстоит участие в мероприятии,
+              где
+              все гости будут наверняка одеты в наряды "от кутюр", а у меня со средствами туговато
+            </p>
+            <p class="dialog__date">сегодня в 17.45</p>
+          </li>
+          <li class="dialog__item dialog__item--me">
+            <img class="modal__avatar" src="img/avatar.jpg" alt="avatar">
+            <p class="dialog__text">
+              Поисковик вам в помощь! Но цена примерно в половину стоимости платья.
+            </p>
+            <p class="dialog__date">18.45</p>
+          </li>
+          <li class="dialog__item">
+            <img class="modal__avatar" src="img/friend-avatar.jpg" alt="friend avatar">
+            <p class="dialog__text">
+              Где взять на прокат вечернее красивое платье? А еще лучше дизайнерское! Предстоит участие в мероприятии,
+              где
+              все гости будут наверняка одеты в наряды "от кутюр", а у меня со средствами туговато
+            </p>
+            <p class="dialog__date"> 19.45</p>
+          </li>
+        </ul>
+      </div>
+      <div class="modal__message user-message">
+        <img class="modal__avatar" src="img/avatar.jpg" alt="avatar">
+        <form class="user-message__form" action="#">
+          <textarea class="user-message__textarea" name="message" rows="4"></textarea>
+          <button class="user-message__btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
